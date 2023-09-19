@@ -35,8 +35,8 @@ const NavItem = styled(Link)`
   }
 `;
 const NavLogo = styled.img`
-  height: 3rem;
-  object-fit: contain;
-  
+  height: 10vh;
+  margin:0 1rem;
+  object-fit: cover;
 `;
 export { NavCover, NavHeading, NavItemCover, NavItem, NavLogo };

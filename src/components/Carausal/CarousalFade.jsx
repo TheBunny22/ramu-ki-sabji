@@ -2,63 +2,89 @@ import { Carousel } from "react-bootstrap";
 import Slide from "../../assets/Banner.jpg";
 import Slide2 from "../../assets/Banner2.jpg";
 import Slide3 from "../../assets/Banner3.jpg";
-import {
-  ButtonWrapper,
-  CaraousalItemCover,
-  Caraousalheading,
-  ImageCaraousal,
-} from "./CarousalFade.style";
-import { PrimaryButton, SecondaryButton } from "../Button/Button.style.";
+import { ImageCover } from "./CarousalFade.style";
 function CarouselFade() {
   return (
-    <Carousel fade>
+    <Carousel fade indicators={false}>
       <Carousel.Item>
-        <ImageCaraousal
-          className="d-block w-100"
-          src={Slide}
-          alt="First slide"
-        />
+        <ImageCover>
+          <img src={Slide} />
+        </ImageCover>
         <Carousel.Caption>
-          <CaraousalItemCover fd="columns">
-            <Caraousalheading>Spice up your life with paneer</Caraousalheading>
-            <ButtonWrapper>
-              <PrimaryButton p="0.5rem 1rem">Order</PrimaryButton>
-              <SecondaryButton p="0.5rem 1rem" >Menu</SecondaryButton>
-            </ButtonWrapper>
-          </CaraousalItemCover>
+          <div className="carousel">
+            <div className="carousel-text">
+              <h1>
+                Best <span>Quality</span> Ingredients
+              </h1>
+              <p>
+                Experience a World of Flavour and Delight with Our Exceptional
+                Selection of the Finest, Freshest, and Highest-Quality
+                Ingredients for Every Culinary Creation.
+              </p>
+              <div className="carousel-btn">
+                <a className="btn custom-btn" href="">
+                  View Menu
+                </a>
+                <a className="btn custom-btn" href="">
+                  Book Table
+                </a>
+              </div>
+            </div>
+          </div>
         </Carousel.Caption>
       </Carousel.Item>
       <Carousel.Item>
-        <ImageCaraousal
-          className="d-block w-100"
-          src={Slide2}
-          alt="second slide"
-        />
-
+        <ImageCover>
+          <img src={Slide2} />
+        </ImageCover>
         <Carousel.Caption>
-          <CaraousalItemCover>
-            <Caraousalheading>We’re always in the mood for food</Caraousalheading>
-            <ButtonWrapper>
-              <PrimaryButton p="0.5rem 1rem">Order</PrimaryButton>
-              <SecondaryButton p="0.5rem 1rem" >Menu</SecondaryButton>
-            </ButtonWrapper>
-          </CaraousalItemCover>
+          <div className="carousel">
+            <div className="carousel-text">
+              <h1>
+                World’s <span>Best</span> Chef
+              </h1>
+              <p>
+                Embark on a Gastronomic Journey Beyond Compare, Crafted by the
+                Expertise of Our Culinary Maestros, as We Redefine Excellence in
+                Every Dish.
+              </p>
+              <div className="carousel-btn">
+                <a className="btn custom-btn" href="">
+                  View Menu
+                </a>
+                <a className="btn custom-btn" href="">
+                  Book Table
+                </a>
+              </div>
+            </div>
+          </div>
         </Carousel.Caption>
       </Carousel.Item>
       <Carousel.Item>
-        <ImageCaraousal
-          className="d-block w-100"
-          src={Slide3}
-          alt="third slide"
-        />
+        <ImageCover>
+          <img src={Slide3} />
+        </ImageCover>
         <Carousel.Caption>
-          <CaraousalItemCover>
-            <Caraousalheading>Food that’s full of surprises</Caraousalheading>
-            <ButtonWrapper>
-              <PrimaryButton p="0.5rem 1rem">Order</PrimaryButton>
-              <SecondaryButton p="0.5rem 1rem" >Menu</SecondaryButton>
-            </ButtonWrapper>
-          </CaraousalItemCover>
+          <div className="carousel">
+            <div className="carousel-text">
+              <h1>
+                Fastest Order <span>Delivery</span>
+              </h1>
+              <p>
+                Experience the Ultimate Convenience and Speed in Satisfying Your
+                Appetite with Our Lightning-Fast Order Delivery Service –
+                Bringing Your Favourite Flavours to Your Doorstep in No Time.
+              </p>
+              <div className="carousel-btn">
+                <a className="btn custom-btn" href="">
+                  View Menu
+                </a>
+                <a className="btn custom-btn" href="">
+                  Book Table
+                </a>
+              </div>
+            </div>
+          </div>
         </Carousel.Caption>
       </Carousel.Item>
     </Carousel>
