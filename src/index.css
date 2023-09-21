@@ -1,6 +1,8 @@
 /*******************************/
 /********* General CSS *********/
 /*******************************/
+html { scroll-behavior: smooth; }
+
 body {
   color: #757575;
   background: #ffffff;
@@ -370,7 +372,7 @@ a:focus {
   margin-bottom: 45px;
   padding: 150px 0 90px 0;
   text-align: center;
-  background: linear-gradient(rgba(0, 0, 0, .5), rgba(0, 0, 0, .5)), url(../img/page-header.jpg);
+  background: linear-gradient(rgba(0, 0, 0, .5), rgba(0, 0, 0, .5)), url(./assets/home-cover.jpg);
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -1962,4 +1964,7 @@ a:focus {
 
 .footer .copyright p a:hover {
   color: #719a0a;
+}
+a{
+  text-decoration: none;
 }

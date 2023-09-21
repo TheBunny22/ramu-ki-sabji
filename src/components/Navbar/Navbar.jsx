@@ -6,16 +6,24 @@ import {
   NavItemCover,
   NavLogo,
 } from "./Navbar.style";
-import { Outlet } from "react-router-dom";
+import { Link, NavLink, Outlet } from "react-router-dom";
 import Logo from "../../assets/logo1.png";
+import Footer from "./Footer";
 const Navbar = () => {
+  const scrollTop = () => {
+    document.body.scrollTop = 0; // For Safari
+    document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+  };
+
   return (
     <>
       <div className="navbar navbar-expand-lg bg-light navbar-light">
         <div className="container-fluid">
-          <NavLogo src={Logo} alt="Logo" />
-          <a href="/" className="navbar-brand">
+          <NavLogo src={Logo}  alt="Logo" />
+          <a className="navbar-brand" onClick={scrollTop}>
+            <Link to="/">
             Ramu <span>Ki</span> Sabji
+            </Link>
           </a>
           <button
             type="button"
@@ -31,24 +39,39 @@ const Navbar = () => {
             id="navbarCollapse"
           >
             <div className="navbar-nav ml-auto">
-              <a href="index.html" className="nav-item nav-link active">
+              <NavLink
+                to="/"
+                className="nav-item nav-link"
+                activeClassName="active"
+                onClick={scrollTop}
+              >
                 Home
-              </a>
-              <a href="about.html" className="nav-item nav-link">
+              </NavLink>
+              <NavLink
+                to="/about"
+                className="nav-item nav-link"
+                activeClassName="active"
+                onClick={scrollTop}
+              >
                 About
-              </a>
-              <a href="feature.html" className="nav-item nav-link">
-                Feature
-              </a>
-              <a href="team.html" className="nav-item nav-link">
-                Chef
-              </a>
-              <a href="menu.html" className="nav-item nav-link">
+              </NavLink>
+              <NavLink
+                to="/menu"
+                className="nav-item nav-link"
+                activeClassName="active"
+                onClick={scrollTop}
+              >
                 Menu
-              </a>
-              <a href="booking.html" className="nav-item nav-link">
+              </NavLink>
+              <NavLink
+                to="/booking"
+                className="nav-item nav-link"
+                activeClassName="active"
+                onClick={scrollTop}
+              >
                 Booking
-              </a>
+              </NavLink>
+             
               <div className="nav-item dropdown">
                 <a
                   href="#"
@@ -74,11 +97,12 @@ const Navbar = () => {
         </div>
       </div>
       <Outlet />
+      <Footer />
     </>
     // <>
     //   <NavCover>
     //     <NavHeading>
-    //      
+    //
     //       <span style={{ color: colors.Orange }}>Ramu</span>
     //       <span style={{ color: colors.Black }}>&nbsp;Ki&nbsp;</span>
     //       <span style={{ color: colors.Green }}>Sabji</span>

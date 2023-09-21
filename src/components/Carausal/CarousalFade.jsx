@@ -3,6 +3,7 @@ import Slide from "../../assets/Banner.jpg";
 import Slide2 from "../../assets/Banner2.jpg";
 import Slide3 from "../../assets/Banner3.jpg";
 import { ImageCover } from "./CarousalFade.style";
+import { Link } from "react-router-dom";
 function CarouselFade() {
   return (
     <Carousel fade indicators={false}>
@@ -22,9 +23,9 @@ function CarouselFade() {
                 Ingredients for Every Culinary Creation.
               </p>
               <div className="carousel-btn">
-                <a className="btn custom-btn" href="">
+                <Link to="/menu" className="btn custom-btn">
                   View Menu
-                </a>
+                </Link>
                 <a className="btn custom-btn" href="">
                   Book Table
                 </a>
@@ -49,9 +50,9 @@ function CarouselFade() {
                 Every Dish.
               </p>
               <div className="carousel-btn">
-                <a className="btn custom-btn" href="">
+                <Link to="/menu" className="btn custom-btn">
                   View Menu
-                </a>
+                </Link>
                 <a className="btn custom-btn" href="">
                   Book Table
                 </a>
@@ -76,9 +77,9 @@ function CarouselFade() {
                 Bringing Your Favourite Flavours to Your Doorstep in No Time.
               </p>
               <div className="carousel-btn">
-                <a className="btn custom-btn" href="">
+                <Link to="/menu" className="btn custom-btn">
                   View Menu
-                </a>
+                </Link>
                 <a className="btn custom-btn" href="">
                   Book Table
                 </a>
