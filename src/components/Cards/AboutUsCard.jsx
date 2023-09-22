@@ -1,14 +1,10 @@
 import React from "react";
 import chef from "../../assets/chef1.jpg";
 import { Link } from "react-router-dom";
-
+import useScrollTop from "../../hooks/useScrollTop";
 
 const AboutUsCard = () => {
-
-  const scrollTop = () => {
-    document.body.scrollTop = 0; // For Safari
-    document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
-  };
+  const { scrollTop } = useScrollTop();
 
   return (
     <div>

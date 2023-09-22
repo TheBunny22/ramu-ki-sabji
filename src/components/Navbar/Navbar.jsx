@@ -9,20 +9,18 @@ import {
 import { Link, NavLink, Outlet } from "react-router-dom";
 import Logo from "../../assets/logo1.png";
 import Footer from "./Footer";
+import useScrollTop from "../../hooks/useScrollTop";
 const Navbar = () => {
-  const scrollTop = () => {
-    document.body.scrollTop = 0; // For Safari
-    document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
-  };
+  const { scrollTop } = useScrollTop();
 
   return (
     <>
       <div className="navbar navbar-expand-lg bg-light navbar-light">
         <div className="container-fluid">
-          <NavLogo src={Logo}  alt="Logo" />
+          <NavLogo src={Logo} alt="Logo" />
           <a className="navbar-brand" onClick={scrollTop}>
             <Link to="/">
-            Ramu <span>Ki</span> Sabji
+              Ramu <span>Ki</span> Sabji
             </Link>
           </a>
           <button
@@ -71,7 +69,7 @@ const Navbar = () => {
               >
                 Booking
               </NavLink>
-             
+
               <div className="nav-item dropdown">
                 <a
                   href="#"

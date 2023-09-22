@@ -1,6 +1,9 @@
 import React from "react";
+import { Link } from "react-router-dom";
+import useScrollTop from "../../hooks/useScrollTop";
 
 const Footer = () => {
+  const { scrollTop } = useScrollTop();
   return (
     <div className="footer">
       <div className="container">
@@ -11,8 +14,9 @@ const Footer = () => {
                 <div className="footer-contact">
                   <h2>Our Address</h2>
                   <p>
-                    <i className="fa fa-map-marker-alt"></i>14 Adarsh Complex,oppo.
-                    of Krishna Sweat Mart ,Sahkarijin Road, Himmatnagar - 383001{" "}
+                    <i className="fa fa-map-marker-alt"></i>14 Adarsh
+                    Complex,oppo. of Krishna Sweat Mart ,Sahkarijin Road,
+                    Himmatnagar - 383001{" "}
                   </p>
                   <p>
                     <i className="fa fa-phone-alt"></i>+91 94272 68870
@@ -43,11 +47,15 @@ const Footer = () => {
               <div className="col-md-6">
                 <div className="footer-link">
                   <h2>Quick Links</h2>
-                  <a href="">Terms of use</a>
+                  <Link to="/" onClick={scrollTop} >Home</Link>
+                  <Link to="/about" onClick={scrollTop} >About Us</Link>
+                  <Link to="/menu" onClick={scrollTop} >Menu</Link>
+                  <Link to="/booking" onClick={scrollTop} >Booking</Link>
+                  {/* <a href="">Terms of use</a>
                   <a href="">Privacy policy</a>
                   <a href="">Cookies</a>
                   <a href="">Help</a>
-                  <a href="">FQAs</a>
+                  <a href="">FQAs</a> */}
                 </div>
               </div>
             </div>
@@ -74,7 +82,7 @@ const Footer = () => {
           <p>
             Copyright &copy; <a href="/">Ramu Ki Sabji</a> , All Right Reserved.
           </p>
-          <br/>
+          <br />
           <p>
             Designed By <a href="">Harihar Upadhyay</a>
           </p>

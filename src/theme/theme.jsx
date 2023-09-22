@@ -26,7 +26,7 @@ const Light_orange = "#F48518";
 const Grey = "#F8F9FB";
 const DarkGrey = "#ccc";
 const Yellow = "#FFFF00";
-const White = "#ffffff"
+const White = "#ffffff";
 
 const colors = { Black, Green, Orange, Light_orange, Grey , DarkGrey, Yellow ,White};
 

@@ -6,22 +6,25 @@ import FeaturesCard from "../components/Cards/FeaturesCard";
 import AboutUsCard from "../components/Cards/AboutUsCard";
 import BookingForm from "../components/Cards/BookingForm";
 import FeaturesDiscrip from "../components/Cards/FeaturesDiscrip";
+import useScrollTop from "../hooks/useScrollTop";
+import ContactBlock from "../components/Cards/ContactBlock";
+import MenuBlock from "../components/Cards/MenuBlock";
 
 const Home = () => {
+  const { scrollTop } = useScrollTop();
   useEffect(() => {
-    document.body.scrollTop = 0; // For Safari
-    document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+    scrollTop(); // For Chrome, Firefox, IE and Opera
   }, []);
-  
+
   return (
     <div>
       <CarouselFade />
-      <BookingForm/>
-      <AboutUsCard/>
-      <FeaturesDiscrip/>
-      <FeaturesCard/>
-      <AboutCard />
-      <HighlightsCard />
+      <BookingForm />
+      <AboutUsCard />
+      <FeaturesDiscrip />
+      <FeaturesCard />
+      <MenuBlock />
+      <ContactBlock />
     </div>
   );
 };

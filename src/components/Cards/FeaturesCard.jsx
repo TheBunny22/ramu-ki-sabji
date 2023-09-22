@@ -1,12 +1,10 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import useScrollTop from "../../hooks/useScrollTop";
 
 // contain the Three main catagories of food
 const FeaturesCard = () => {
-  const scrollTop = () => {
-    document.body.scrollTop = 0; // For Safari
-    document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
-  };
+  const {scrollTop} = useScrollTop();
   return (
     <div class="food mt-0">
       <div class="container">
