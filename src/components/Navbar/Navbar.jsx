@@ -70,26 +70,27 @@ const Navbar = () => {
                 Booking
               </NavLink>
 
+              <NavLink
+                to="/contact"
+                className="nav-item nav-link"
+                activeClassName="active"
+                onClick={scrollTop}
+              >
+                Contact
+              </NavLink>
               <div className="nav-item dropdown">
-                <a
-                  href="#"
-                  className="nav-link dropdown-toggle"
-                  data-toggle="dropdown"
-                >
-                  Pages
+                <a className="nav-link dropdown-toggle" data-toggle="dropdown">
+                  Account
                 </a>
                 <div className="dropdown-menu">
-                  <a href="blog.html" className="dropdown-item">
-                    Blog Grid
-                  </a>
-                  <a href="single.html" className="dropdown-item">
-                    Blog Detail
-                  </a>
+                  <Link to="/login" className="dropdown-item">
+                    Login
+                  </Link>
+                  <Link to="/register" className="dropdown-item">
+                    Register
+                  </Link>
                 </div>
               </div>
-              <a href="contact.html" className="nav-item nav-link">
-                Contact
-              </a>
             </div>
           </div>
         </div>
@@ -97,26 +98,6 @@ const Navbar = () => {
       <Outlet />
       <Footer />
     </>
-    // <>
-    //   <NavCover>
-    //     <NavHeading>
-    //
-    //       <span style={{ color: colors.Orange }}>Ramu</span>
-    //       <span style={{ color: colors.Black }}>&nbsp;Ki&nbsp;</span>
-    //       <span style={{ color: colors.Green }}>Sabji</span>
-    //     </NavHeading>
-
-    //     <NavItemCover>
-    //       <NavItem to="/">Home</NavItem>
-    //       <NavItem to="/">About</NavItem>
-    //       <NavItem to="/">Contact</NavItem>
-    //       <NavItem to="/">Menu</NavItem>
-    //       <div>
-    //         <NavItem to="/">Login </NavItem>/<NavItem to="/"> Signup</NavItem>
-    //       </div>
-    //     </NavItemCover>
-    //   </NavCover>
-    // </>
   );
 };
 

@@ -1,7 +1,5 @@
 import React, { useEffect } from "react";
 import CarouselFade from "../components/Carausal";
-import AboutCard from "../components/Cards/AboutCard";
-import HighlightsCard from "../components/Cards/HighlightsCard";
 import FeaturesCard from "../components/Cards/FeaturesCard";
 import AboutUsCard from "../components/Cards/AboutUsCard";
 import BookingForm from "../components/Cards/BookingForm";

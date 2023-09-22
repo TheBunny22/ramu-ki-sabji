@@ -818,6 +818,7 @@ a:focus {
 .feature .feature-img img {
   width: 100%;
   transition: .3s;
+  
 }
 
 .feature .feature-img img:hover {

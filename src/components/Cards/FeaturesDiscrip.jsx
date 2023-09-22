@@ -1,6 +1,13 @@
 import React from "react";
+import { Link } from "react-router-dom";
+import useScrollTop from "../../hooks/useScrollTop";
+import Banner from "../../assets/Banner.jpg";
+import Banner2 from "../../assets/Banner2.jpg";
+import Banner3 from "../../assets/Banner3.jpg";
+import Banner4 from "../../assets/home-cover.jpg";
 
 const FeaturesDiscrip = () => {
+  const { scrollTop } = useScrollTop();
   return (
     <div class="feature">
       <div class="container">
@@ -14,28 +21,32 @@ const FeaturesDiscrip = () => {
               <div class="feature-img">
                 <div class="row">
                   <div class="col-6">
-                    <img src="img/feature-1.jpg" alt="Image" />
+                    <img src={Banner} alt="Image" style={{ scale: "1.5" }} />
                   </div>
                   <div class="col-6">
-                    <img src="img/feature-2.jpg" alt="Image" />
+                    <img src={Banner2} alt="Image" />
                   </div>
                   <div class="col-6">
-                    <img src="img/feature-3.jpg" alt="Image" />
+                    <img src={Banner3} alt="Image" style={{ scale: "1.5" }} />
                   </div>
                   <div class="col-6">
-                    <img src="img/feature-4.jpg" alt="Image" />
+                    <img src={Banner4} alt="Image" />
                   </div>
                 </div>
               </div>
               <p>
-                Lorem ipsum dolor sit amet consec adipis elit. Phasel nec preti
-                mi. Curabit facilis ornare velit non vulputa. Aliquam metus
-                tortor, auctor id gravida condime, viverra quis sem. Curabit non
-                nisl nec nisi sceleri maximus
+                At Ramu ki Sabji, we take pride in being your go-to destination
+                for farm-fresh, high-quality vegetables. With a commitment to
+                variety, affordability, and sustainability, we strive to make
+                healthy living both accessible and enjoyable for you and your
+                family.
               </p>
-              <a class="btn custom-btn" href="">
+              <p>
+              Thank you for choosing Ramu ki Sabji, your trusted partner for wholesome and delicious vegetable delights.
+              </p>
+              <Link to="/booking" onClick={scrollTop} class="btn custom-btn">
                 Book A Table
-              </a>
+              </Link>
             </div>
           </div>
           <div class="col-lg-7">
@@ -45,8 +56,9 @@ const FeaturesDiscrip = () => {
                   <i class="flaticon-cooking"></i>
                   <h3>World’s best Chef</h3>
                   <p>
-                    Lorem ipsum dolor sit amet elit. Phasel nec preti mi.
-                    Curabit facilis ornare velit non vulput metus tortor
+                    Experience culinary excellence with our world-renowned chef.
+                    Immerse yourself in a gastronomic journey where every dish
+                    is a masterpiece crafted with passion and precision.
                   </p>
                 </div>
               </div>
@@ -55,8 +67,9 @@ const FeaturesDiscrip = () => {
                   <i class="flaticon-vegetable"></i>
                   <h3>Natural ingredients</h3>
                   <p>
-                    Lorem ipsum dolor sit amet elit. Phasel nec preti mi.
-                    Curabit facilis ornare velit non vulput metus tortor
+                    We use only the finest natural ingredients sourced from the
+                    earth. Our commitment to quality ensures that every bite is
+                    filled with wholesome goodness and authentic flavors.
                   </p>
                 </div>
               </div>
@@ -67,18 +80,21 @@ const FeaturesDiscrip = () => {
                   <i class="flaticon-medal"></i>
                   <h3>Best quality products</h3>
                   <p>
-                    Lorem ipsum dolor sit amet elit. Phasel nec preti mi.
-                    Curabit facilis ornare velit non vulput metus tortor
+                    Quality is our top priority. We select the best products for
+                    your enjoyment, guaranteeing that every meal is a delightful
+                    experience characterized by freshness and exceptional taste.
                   </p>
                 </div>
               </div>
               <div class="col-sm-6">
                 <div class="feature-item">
                   <i class="flaticon-meat"></i>
-                  <h3>Fresh vegetables & Meet</h3>
+                  <h3>Fresh vegetables</h3>
                   <p>
-                    Lorem ipsum dolor sit amet elit. Phasel nec preti mi.
-                    Curabit facilis ornare velit non vulput metus tortor
+                    Our dedication to freshness shines through in every dish. We
+                    handpick the crispiest, juiciest vegetables, delivering a
+                    burst of natural flavors that elevate your dining
+                    experience.
                   </p>
                 </div>
               </div>
@@ -89,18 +105,20 @@ const FeaturesDiscrip = () => {
                   <i class="flaticon-courier"></i>
                   <h3>Fastest door delivery</h3>
                   <p>
-                    Lorem ipsum dolor sit amet elit. Phasel nec preti mi.
-                    Curabit facilis ornare velit non vulput metus tortor
+                    Enjoy the convenience of swift doorstep delivery. With our
+                    efficient service, your favorite dishes are just a click
+                    away, arriving at your home piping hot and ready to savor.
                   </p>
                 </div>
               </div>
               <div class="col-sm-6">
                 <div class="feature-item">
                   <i class="flaticon-fruits-and-vegetables"></i>
-                  <h3>Ground beef & Low fat</h3>
+                  <h3>Green Veggies & Low fat oil</h3>
                   <p>
-                    Lorem ipsum dolor sit amet elit. Phasel nec preti mi.
-                    Curabit facilis ornare velit non vulput metus tortor
+                    Health and taste harmonize in our cuisine. We prioritize
+                    your well-being by using green, leafy vegetables and low-fat
+                    oils, ensuring your meal is both nutritious and delicious.
                   </p>
                 </div>
               </div>
