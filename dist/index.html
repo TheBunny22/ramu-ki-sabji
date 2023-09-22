@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ramu Ki Sabji - Made Food with Love</title>
+    <!-- Google Font -->
+    <link
+      href="https://fonts.googleapis.com/css?family=Open+Sans:300,400|Nunito:600,700"
+      rel="stylesheet"
+    />
+
+    <!-- CSS Libraries -->
+    <link
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css"
+      rel="stylesheet"
+    />
+    
+    
+    
+    
+
+    <!-- Template Stylesheet -->
+    
+    <script type="module" crossorigin src="/assets/index-a9a3fcb6.js"></script>
+    <link rel="stylesheet" href="/assets/index-b0e48515.css">
+  </head>
+  <body>
+    <div id="root"></div>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
+    
+    <script src="src/lib/easing/easing.min.js"></script>
+    <script src="src/lib/owlcarousel/owl.carousel.min.js"></script>
+    <script src="src/lib/tempusdominus/js/moment.min.js"></script>
+    <script src="src/lib/tempusdominus/js/moment-timezone.min.js"></script>
+    <script src="src/lib/tempusdominus/js/tempusdominus-bootstrap-4.min.js"></script>
+    <script lang="javascript" >
+            (function ($) {
+          "use strict";
+
+          // Back to top button
+          $(window).scroll(function () {
+              if ($(this).scrollTop() > 200) {
+                  $('.back-to-top').fadeIn('slow');
+              } else {
+                  $('.back-to-top').fadeOut('slow');
+              }
+          });
+          $('.back-to-top').click(function () {
+              $('html, body').animate({scrollTop: 0}, 1500, 'easeInOutExpo');
+              return false;
+          });
+
+
+          // Sticky Navbar
+          $(window).scroll(function () {
+              if ($(this).scrollTop() > 0) {
+                  $('.navbar').addClass('nav-sticky');
+              } else {
+                  $('.navbar').removeClass('nav-sticky');
+              }
+          });
+
+
+          // Dropdown on mouse hover
+          $(document).ready(function () {
+              function toggleNavbarMethod() {
+                  if ($(window).width() > 992) {
+                      $('.navbar .dropdown').on('mouseover', function () {
+                          $('.dropdown-toggle', this).trigger('click');
+                      }).on('mouseout', function () {
+                          $('.dropdown-toggle', this).trigger('click').blur();
+                      });
+                  } else {
+                      $('.navbar .dropdown').off('mouseover').off('mouseout');
+                  }
+              }
+              toggleNavbarMethod();
+              $(window).resize(toggleNavbarMethod);
+          });
+
+
+          // Main carousel
+          $(".carousel .owl-carousel").owlCarousel({
+              autoplay: true,
+              animateOut: 'fadeOut',
+              animateIn: 'fadeIn',
+              items: 1,
+              smartSpeed: 300,
+              dots: false,
+              loop: true,
+              nav : false
+          });
+
+          // Modal Video
+          $(document).ready(function () {
+              var $videoSrc;
+              $('.btn-play').click(function () {
+                  $videoSrc = $(this).data("src");
+              });
+              console.log($videoSrc);
+
+              $('#videoModal').on('shown.bs.modal', function (e) {
+                  $("#video").attr('src', $videoSrc + "?autoplay=1&amp;modestbranding=1&amp;showinfo=0");
+              })
+
+              $('#videoModal').on('hide.bs.modal', function (e) {
+                  $("#video").attr('src', $videoSrc);
+              })
+          });
+
+
+          // Date and time picker
+          $('#date').datetimepicker({
+              format: 'L'
+          });
+          $('#time').datetimepicker({
+              format: 'LT'
+          });
+
+
+          // Testimonials carousel
+          $(".testimonials-carousel").owlCarousel({
+              center: true,
+              autoplay: true,
+              dots: true,
+              loop: true,
+              responsive: {
+                  0:{
+                      items:1
+                  },
+                  576:{
+                      items:1
+                  },
+                  768:{
+                      items:2
+                  },
+                  992:{
+                      items:3
+                  }
+              }
+          });
+
+
+          // Related post carousel
+          $(".related-slider").owlCarousel({
+              autoplay: true,
+              dots: false,
+              loop: true,
+              nav : true,
+              navText : [
+                  '<i class="fa fa-angle-left" aria-hidden="true"></i>',
+                  '<i class="fa fa-angle-right" aria-hidden="true"></i>'
+              ],
+              responsive: {
+                  0:{
+                      items:1
+                  },
+                  576:{
+                      items:1
+                  },
+                  768:{
+                      items:2
+                  }
+              }
+          });
+
+      })(jQuery);
+    </script>
+     
+      
+  </body>
+</html>
