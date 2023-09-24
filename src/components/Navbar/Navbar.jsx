@@ -1,11 +1,5 @@
 import React from "react";
-import {
-  NavCover,
-  NavHeading,
-  NavItem,
-  NavItemCover,
-  NavLogo,
-} from "./Navbar.style";
+import { NavLogo } from "./Navbar.style";
 import { Link, NavLink, Outlet } from "react-router-dom";
 import Logo from "../../assets/logo1.png";
 import Footer from "./Footer";
