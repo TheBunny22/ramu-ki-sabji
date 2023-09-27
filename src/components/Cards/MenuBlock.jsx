@@ -2,6 +2,7 @@ import React from "react";
 import Chanams from "../../assets/chanams.jpg";
 import Paneer from "../../assets/pnrchilly.jpg";
 import Banner from "../../assets/pxfuel.jpg";
+import MenuComponent from "./MenuComponent";
 const MenuBlock = () => {
   return (
     <div className="menu">
@@ -32,19 +33,7 @@ const MenuBlock = () => {
             <div id="burgers" className="container tab-pane active">
               <div className="row">
                 <div className="col-lg-7 col-md-12">
-                  <div className="menu-item">
-                    <div className="menu-img">
-                      <img src={Chanams} alt="Image" />
-                    </div>
-                    <div className="menu-text">
-                      <h3>
-                        <span>Mini cheese Burger</span> <strong>₹9.00</strong>
-                      </h3>
-                      <p>
-                        Lorem ipsum dolor sit amet elit. Phasel nec preti facil
-                      </p>
-                    </div>
-                  </div>
+                  <MenuComponent imageSrc={Chanams} itemName={"Chana Masala"} itemDescription={"AJHVVJVJAVJV"} itemPrice={490}/>
                   <div className="menu-item">
                     <div className="menu-img">
                       <img src={Chanams} alt="Image" />
