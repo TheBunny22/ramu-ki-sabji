@@ -8,15 +8,15 @@ const AboutUsCard = () => {
 
   return (
     <div>
-      <div class="about">
-        <div class="container">
-          <div class="row align-items-center">
-            <div class="col-lg-6">
-              <div class="about-img">
+      <div className="about">
+        <div className="container">
+          <div className="row align-items-center">
+            <div className="col-lg-6">
+              <div className="about-img">
                 <img src={chef} alt="Image" />
                 <button
                   type="button"
-                  class="btn-play"
+                  className="btn-play"
                   data-toggle="modal"
                   data-src="https://www.youtube.com/embed/tJlzIJaokVY"
                   data-target="#videoModal"
@@ -25,13 +25,13 @@ const AboutUsCard = () => {
                 </button>
               </div>
             </div>
-            <div class="col-lg-6">
-              <div class="about-content">
-                <div class="section-header">
+            <div className="col-lg-6">
+              <div className="about-content">
+                <div className="section-header">
                   <p>About Us</p>
                   <h2>Cooking Since 2019</h2>
                 </div>
-                <div class="about-text">
+                <div className="about-text">
                   <p>
                     Established on 9th February 2019, Ramu ki Sabji is a
                     pioneering food parcel service that has been delighting
@@ -50,7 +50,7 @@ const AboutUsCard = () => {
                     contributing to the welfare of society.
                   </p>
                   <Link
-                    class="btn custom-btn"
+                    className="btn custom-btn"
                     to="/booking"
                     onClick={scrollTop}
                   >
@@ -63,27 +63,27 @@ const AboutUsCard = () => {
         </div>
       </div>
       <div
-        class="modal fade"
+        className="modal fade"
         id="videoModal"
-        tabindex="-1"
+        tabIndex="-1"
         role="dialog"
         aria-labelledby="exampleModalLabel"
         aria-hidden="true"
       >
-        <div class="modal-dialog" role="document">
-          <div class="modal-content">
-            <div class="modal-body">
+        <div className="modal-dialog" role="document">
+          <div className="modal-content">
+            <div className="modal-body">
               <button
                 type="button"
-                class="close"
+                className="close"
                 data-dismiss="modal"
                 aria-label="Close"
               >
                 <span aria-hidden="true">&times;</span>
               </button>
-              <div class="embed-responsive embed-responsive-16by9">
+              <div className="embed-responsive embed-responsive-16by9">
                 <iframe
-                  class="embed-responsive-item"
+                  className="embed-responsive-item"
                   src=""
                   id="video"
                   allowscriptaccess="always"

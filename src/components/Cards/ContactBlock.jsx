@@ -89,7 +89,7 @@ const ContactBlock = () => {
           </div>
           <div className="col-md-6">
             <div id="success"></div>
-            <form name="sentMessage" id="contactForm" novalidate="novalidate">
+            <form name="sentMessage" id="contactForm" noValidate="novalidate">
               <div className="control-group">
                 <input
                   type="text"

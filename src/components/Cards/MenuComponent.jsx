@@ -84,13 +84,13 @@ const Bottom = styled.div`
 const Button = styled.button`
   border: 0.2rem solid #719a0a;
   padding: 0.2rem 0.5rem;
-  background-color: ${props => props.bg ? "#719a0a":"transparent"};
-  color:   ${props => props.bg ? "#ffffff":"#252525"};
+  background-color: ${(props) => (props.bg ? "#719a0a" : "transparent")};
+  color: ${(props) => (props.bg ? "#ffffff" : "#252525")};
 
   cursor: pointer;
   text-align: center;
   font-size: 16px;
-  font-weight:bolder;
+  font-weight: bolder;
   transition: background-color 0.3s ease, color 0.3s ease;
 
   &:hover {
@@ -105,7 +105,14 @@ const ButtonGroup = styled.div`
   align-items: center;
 `;
 
-function MenuComponent({ imageSrc, itemName, itemPrice, itemDescription }) {
+function MenuComponent({
+  imageSrc,
+  itemName,
+  itemPrice,
+  itemDescription,
+  rating,
+  inStock
+}) {
   const [show, setShow] = useState(false);
 
   const showModel = () => setShow(true);
@@ -122,16 +129,14 @@ function MenuComponent({ imageSrc, itemName, itemPrice, itemDescription }) {
             <span>{itemName}</span> <strong>₹{itemPrice}</strong>
           </h3>
           <Bottom>
-            <p>
-              {itemDescription}
-            </p>
-            <div style={{display : "flex" , gap : "1rem"}}>
-              <StarRating rating={0} />
-             <NumberInputs onChange={(a)=>console.log(a)} value={0}/>
-              {/* <ButtonGroup>
-                <Button bg>-</Button> <input type="number" /> <Button bg>+</Button>
-              </ButtonGroup> */}
-              {/* <ButtonV2Green onClick={showModel}>Buy</ButtonV2Green> */}
+            <p>{itemDescription}</p>
+            <div style={{ display: "flex", gap: "1rem" }}>
+              <StarRating rating={rating} />
+              <NumberInputs
+                onChange={(a) => console.log(a)}
+                value={0}
+                inStock={inStock}
+              />
             </div>
           </Bottom>
         </MenuText>

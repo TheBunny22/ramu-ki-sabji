@@ -12,11 +12,11 @@ const Navbar = () => {
       <div className="navbar navbar-expand-lg bg-light navbar-light">
         <div className="container-fluid">
           <NavLogo src={Logo} alt="Logo" />
-          <a className="navbar-brand" onClick={scrollTop}>
+          <div className="navbar-brand" onClick={scrollTop}>
             <Link to="/">
               Ramu <span>Ki</span> Sabji
             </Link>
-          </a>
+          </div>
           <button
             type="button"
             className="navbar-toggler"
@@ -34,7 +34,7 @@ const Navbar = () => {
               <NavLink
                 to="/"
                 className="nav-item nav-link"
-                activeClassName="active"
+                activeclassname="active"
                 onClick={scrollTop}
               >
                 Home
@@ -42,7 +42,7 @@ const Navbar = () => {
               <NavLink
                 to="/about"
                 className="nav-item nav-link"
-                activeClassName="active"
+                activeclassname="active"
                 onClick={scrollTop}
               >
                 About
@@ -50,7 +50,7 @@ const Navbar = () => {
               <NavLink
                 to="/menu"
                 className="nav-item nav-link"
-                activeClassName="active"
+                activeclassname="active"
                 onClick={scrollTop}
               >
                 Menu
@@ -58,7 +58,7 @@ const Navbar = () => {
               <NavLink
                 to="/booking"
                 className="nav-item nav-link"
-                activeClassName="active"
+                activeclassname="active"
                 onClick={scrollTop}
               >
                 Booking
@@ -67,7 +67,7 @@ const Navbar = () => {
               <NavLink
                 to="/contact"
                 className="nav-item nav-link"
-                activeClassName="active"
+                activeclassname="active"
                 onClick={scrollTop}
               >
                 Contact

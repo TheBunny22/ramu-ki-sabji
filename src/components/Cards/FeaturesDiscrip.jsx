@@ -9,27 +9,27 @@ import Banner4 from "../../assets/home-cover.jpg";
 const FeaturesDiscrip = () => {
   const { scrollTop } = useScrollTop();
   return (
-    <div class="feature">
-      <div class="container">
-        <div class="row">
-          <div class="col-lg-5">
-            <div class="section-header">
+    <div className="feature">
+      <div className="container">
+        <div className="row">
+          <div className="col-lg-5">
+            <div className="section-header">
               <p>Why Choose Us</p>
               <h2>Our Key Features</h2>
             </div>
-            <div class="feature-text">
-              <div class="feature-img">
-                <div class="row">
-                  <div class="col-6">
+            <div className="feature-text">
+              <div className="feature-img">
+                <div className="row">
+                  <div className="col-6">
                     <img src={Banner} alt="Image" style={{ scale: "1.5" }} />
                   </div>
-                  <div class="col-6">
+                  <div className="col-6">
                     <img src={Banner2} alt="Image" />
                   </div>
-                  <div class="col-6">
+                  <div className="col-6">
                     <img src={Banner3} alt="Image" style={{ scale: "1.5" }} />
                   </div>
-                  <div class="col-6">
+                  <div className="col-6">
                     <img src={Banner4} alt="Image" />
                   </div>
                 </div>
@@ -44,16 +44,16 @@ const FeaturesDiscrip = () => {
               <p>
               Thank you for choosing Ramu ki Sabji, your trusted partner for wholesome and delicious vegetable delights.
               </p>
-              <Link to="/booking" onClick={scrollTop} class="btn custom-btn">
+              <Link to="/booking" onClick={scrollTop} className="btn custom-btn">
                 Book A Table
               </Link>
             </div>
           </div>
-          <div class="col-lg-7">
-            <div class="row">
-              <div class="col-sm-6">
-                <div class="feature-item">
-                  <i class="flaticon-cooking"></i>
+          <div className="col-lg-7">
+            <div className="row">
+              <div className="col-sm-6">
+                <div className="feature-item">
+                  <i className="flaticon-cooking"></i>
                   <h3>World’s best Chef</h3>
                   <p>
                     Experience culinary excellence with our world-renowned chef.
@@ -62,9 +62,9 @@ const FeaturesDiscrip = () => {
                   </p>
                 </div>
               </div>
-              <div class="col-sm-6">
-                <div class="feature-item">
-                  <i class="flaticon-vegetable"></i>
+              <div className="col-sm-6">
+                <div className="feature-item">
+                  <i className="flaticon-vegetable"></i>
                   <h3>Natural ingredients</h3>
                   <p>
                     We use only the finest natural ingredients sourced from the
@@ -74,10 +74,10 @@ const FeaturesDiscrip = () => {
                 </div>
               </div>
             </div>
-            <div class="row">
-              <div class="col-sm-6">
-                <div class="feature-item">
-                  <i class="flaticon-medal"></i>
+            <div className="row">
+              <div className="col-sm-6">
+                <div className="feature-item">
+                  <i className="flaticon-medal"></i>
                   <h3>Best quality products</h3>
                   <p>
                     Quality is our top priority. We select the best products for
@@ -86,9 +86,9 @@ const FeaturesDiscrip = () => {
                   </p>
                 </div>
               </div>
-              <div class="col-sm-6">
-                <div class="feature-item">
-                  <i class="flaticon-meat"></i>
+              <div className="col-sm-6">
+                <div className="feature-item">
+                  <i className="flaticon-meat"></i>
                   <h3>Fresh vegetables</h3>
                   <p>
                     Our dedication to freshness shines through in every dish. We
@@ -99,10 +99,10 @@ const FeaturesDiscrip = () => {
                 </div>
               </div>
             </div>
-            <div class="row">
-              <div class="col-sm-6">
-                <div class="feature-item">
-                  <i class="flaticon-courier"></i>
+            <div className="row">
+              <div className="col-sm-6">
+                <div className="feature-item">
+                  <i className="flaticon-courier"></i>
                   <h3>Fastest door delivery</h3>
                   <p>
                     Enjoy the convenience of swift doorstep delivery. With our
@@ -111,9 +111,9 @@ const FeaturesDiscrip = () => {
                   </p>
                 </div>
               </div>
-              <div class="col-sm-6">
-                <div class="feature-item">
-                  <i class="flaticon-fruits-and-vegetables"></i>
+              <div className="col-sm-6">
+                <div className="feature-item">
+                  <i className="flaticon-fruits-and-vegetables"></i>
                   <h3>Green Veggies & Low fat oil</h3>
                   <p>
                     Health and taste harmonize in our cuisine. We prioritize

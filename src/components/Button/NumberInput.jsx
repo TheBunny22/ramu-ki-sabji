@@ -33,12 +33,25 @@ const ControlButton = styled.button`
 
   &:hover {
     background-color: #719a0a;
-    color:#ffffff;
+    color: #ffffff;
     font-weight: bold;
   }
 `;
 
-function NumberInputs({ value, onChange }) {
+const OutofStockBox = styled.div`
+  height: 30px;
+  width: 96px;
+  background: #f54e00;
+  border-radius: 5px;
+  font-size: small;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+  color: #ffffff;
+`;
+
+function NumberInputs({ value , onChange, inStock }) {
   const handleIncrement = () => {
     onChange(value + 1);
   };
@@ -50,15 +63,21 @@ function NumberInputs({ value, onChange }) {
   };
 
   return (
-    <NumberInputContainer>
-      <ControlButton onClick={handleDecrement}>-</ControlButton>
-      <NumberInput
-        type="text"
-        value={value}
-        onChange={(e) => onChange(parseInt(e.target.value))}
-      />
-      <ControlButton onClick={handleIncrement}>+</ControlButton>
-    </NumberInputContainer>
+    <>
+      {inStock ? (
+        <NumberInputContainer>
+          <ControlButton onClick={handleDecrement}>-</ControlButton>
+          <NumberInput
+            type="text"
+            value={value}
+            onChange={(e) => onChange(parseInt(e.target.value))}
+          />
+          <ControlButton onClick={handleIncrement}>+</ControlButton>
+        </NumberInputContainer>
+      ) : (
+        <OutofStockBox> Out of Stock</OutofStockBox>
+      )}
+    </>
   );
 }
 export default NumberInputs;
