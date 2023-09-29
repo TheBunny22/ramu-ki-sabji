@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useRef, useState } from "react";
 import {
   MDBBtn,
   MDBContainer,
@@ -17,6 +17,8 @@ import { media } from "../theme/theme";
 import { Link } from "react-router-dom";
 import { NavLogo } from "../components/Navbar/Navbar.style";
 import { CustomLink } from "./Registration";
+import { Button } from "react-bootstrap";
+
 
 const ResBox = styled.div`
   ${media.desktop`
@@ -25,6 +27,18 @@ const ResBox = styled.div`
 `;
 
 function Login() {
+  const emailRef = useRef(null);
+  const passwordRef = useRef(null);
+  const [check, setCheck] = useState(false);
+  function handleSubmit() {
+    const email = emailRef.current.value;
+    const password = passwordRef.current.value;
+
+    console.log("Email:", email);
+    console.log("Password:", password);
+    console.log("terms agree", check);
+  }
+
   return (
     <MDBContainer
       fluid
@@ -86,28 +100,32 @@ function Login() {
                 <MDBInput
                   wrapperClass="mb-4"
                   placeholder="Email"
-                  id="form3"
+                  id="email"
+                  name="email"
+                  ref={emailRef}
                   type="email"
                 />
                 <MDBInput
                   wrapperClass="mb-4"
                   placeholder="Password"
-                  id="form4"
+                  id="password"
+                  ref={passwordRef}
                   type="password"
                 />
 
                 <div className="d-flex justify-content-center mb-4">
                   <MDBCheckbox
                     name="flexCheck"
-                    value=""
+                    value={check}
+                    onChange={(e) => setCheck(e.target.checked)}
                     id="flexCheckDefault"
                     label="Remember me"
                   />
                 </div>
 
-                <MDBBtn className="w-100 mb-4" size="md">
+                <Button style={{width:"100%" , marginBottom:"10px"}} onClick={handleSubmit}>
                   sign In
-                </MDBBtn>
+                </Button>
                 <div className="text-center">
                   <CustomLink to="/register">Create New Account</CustomLink>
                 </div>

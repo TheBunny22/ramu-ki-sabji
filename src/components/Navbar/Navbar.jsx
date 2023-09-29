@@ -4,7 +4,9 @@ import { Link, NavLink, Outlet } from "react-router-dom";
 import Logo from "../../assets/logo1.png";
 import Footer from "./Footer";
 import useScrollTop from "../../hooks/useScrollTop";
+import { useSelector } from "react-redux";
 const Navbar = () => {
+  const { auth, username } = useSelector((state) => state.user);
   const { scrollTop } = useScrollTop();
 
   return (
@@ -72,19 +74,41 @@ const Navbar = () => {
               >
                 Contact
               </NavLink>
-              <div className="nav-item dropdown">
-                <a className="nav-link dropdown-toggle" data-toggle="dropdown">
-                  Account
-                </a>
-                <div className="dropdown-menu">
-                  <Link to="/login" className="dropdown-item">
-                    Login
-                  </Link>
-                  <Link to="/register" className="dropdown-item">
-                    Register
-                  </Link>
+              {auth ? (
+                <>
+                  <NavLink
+                    to="/cart"
+                    className="nav-item nav-link"
+                    activeclassname="active"
+                    onClick={scrollTop}
+                  >
+                    Cart
+                  </NavLink>
+                  <NavLink
+                    to="/user"
+                    className="nav-item nav-link"
+                    activeclassname="active"
+                    onClick={scrollTop}
+                  >@{username}</NavLink>
+                </>
+              ) : (
+                <div className="nav-item dropdown">
+                  <a
+                    className="nav-link dropdown-toggle"
+                    data-toggle="dropdown"
+                  >
+                    Account
+                  </a>
+                  <div className="dropdown-menu">
+                    <Link to="/login" className="dropdown-item">
+                      Login
+                    </Link>
+                    <Link to="/register" className="dropdown-item">
+                      Register
+                    </Link>
+                  </div>
                 </div>
-              </div>
+              )}
             </div>
           </div>
         </div>

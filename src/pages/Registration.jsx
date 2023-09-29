@@ -14,13 +14,14 @@ import "./login.css";
 import { NavLogo } from "../components/Navbar/Navbar.style";
 import { Link } from "react-router-dom";
 import styled from "styled-components";
+import { Button } from "react-bootstrap";
 
 export const CustomLink = styled(Link)`
   color: ${(props) =>
     props.variant === "light" ? "hsl(218, 81%, 75%)" : "#1266f1"};
-  text-align:center;
-  display : flex;
-  align-items:center;
+  text-align: center;
+  display: flex;
+  align-items: center;
   justify-content: center;
   &:hover {
     color: ${(props) =>
@@ -150,9 +151,9 @@ function Registration() {
                 />
               </div>
 
-              <MDBBtn className="w-100 mb-4" size="md">
+              <Button style={{ width: "100%", marginBottom: "10px" }}>
                 sign up
-              </MDBBtn>
+              </Button>
 
               <div className="text-center">
                 <CustomLink to="/login">Already Have Account</CustomLink>

@@ -8,8 +8,8 @@ const BookingForm = () => {
           <div className="col-lg-7">
             <div className="booking-content">
               <div className="section-header">
-                <p>Book A Table</p>
-                <h2>Book Your Table For Private Dinners & Happy Hours</h2>
+                <p>Book A Event</p>
+                <h2>Book Your Event For Private Dinners & Happy Hours</h2>
               </div>
               <div className="about-text">
                 <p>
@@ -139,18 +139,13 @@ const BookingForm = () => {
                       className="custom-select form-control"
                       defaultValue="1"
                     >
-                      <option value="0">Guest</option>
-                      <option value="1">1 Guest</option>
-                      <option value="2">2 Guests</option>
-                      <option value="3">3 Guests</option>
-                      <option value="4">4 Guests</option>
-                      <option value="5">5 Guests</option>
-                      <option value="6">6 Guests</option>
-                      <option value="7">7 Guests</option>
-                      <option value="8">8 Guests</option>
-                      <option value="9">9 Guests</option>
-                      <option value="10">10 Guests</option>
-                    </select>
+                      <option value="1">10-20 Guests</option>
+                      <option value="2">20-30 Guests</option>
+                      <option value="3">30-40 Guests</option>
+                      <option value="4">50-70 Guests</option>
+                      <option value="5">70-80 Guests</option>
+                      <option value="6">100+ Guests</option>
+                      </select>
 
                     <div className="input-group-append">
                       <div className="input-group-text">

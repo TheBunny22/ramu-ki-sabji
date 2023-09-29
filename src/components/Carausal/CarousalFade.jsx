@@ -27,7 +27,7 @@ function CarouselFade() {
                   View Menu
                 </Link>
                 <a className="btn custom-btn" href="">
-                  Book Table
+                  Book Event
                 </a>
               </div>
             </div>
@@ -54,7 +54,7 @@ function CarouselFade() {
                   View Menu
                 </Link>
                 <a className="btn custom-btn" href="">
-                  Book Table
+                  Book Event
                 </a>
               </div>
             </div>
@@ -81,7 +81,7 @@ function CarouselFade() {
                   View Menu
                 </Link>
                 <a className="btn custom-btn" href="">
-                  Book Table
+                  Book Event
                 </a>
               </div>
             </div>
