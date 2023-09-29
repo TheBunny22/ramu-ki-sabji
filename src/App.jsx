@@ -11,6 +11,7 @@ import Registration from "./pages/Registration";
 
 function App() {
   return (
+    
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<Navbar />}>

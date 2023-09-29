@@ -1,7 +1,11 @@
-import React from "react";
+import { useState } from "react";
 import styled from "styled-components";
 import { ButtonV2, ButtonV2Green } from "../Button/Button.style.";
-
+import MenuItemDis from "./MenuItemDis";
+import StarRating from "../StarRating";
+import NumberInput from "../Button/NumberInput";
+import NumberInputs from "../Button/NumberInput";
+// import { Button, ButtonGroup } from "react-bootstrap";
 const MenuItem = styled.div`
   position: relative;
   margin-bottom: 30px;
@@ -76,24 +80,63 @@ const Bottom = styled.div`
   justify-content: space-between;
   margin: 2rem 0 0;
 `;
+
+const Button = styled.button`
+  border: 0.2rem solid #719a0a;
+  padding: 0.2rem 0.5rem;
+  background-color: ${props => props.bg ? "#719a0a":"transparent"};
+  color:   ${props => props.bg ? "#ffffff":"#252525"};
+
+  cursor: pointer;
+  text-align: center;
+  font-size: 16px;
+  font-weight:bolder;
+  transition: background-color 0.3s ease, color 0.3s ease;
+
+  &:hover {
+    background-color: green;
+    color: white;
+  }
+`;
+
+const ButtonGroup = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+`;
+
 function MenuComponent({ imageSrc, itemName, itemPrice, itemDescription }) {
+  const [show, setShow] = useState(false);
+
+  const showModel = () => setShow(true);
+
   return (
-    <MenuItem>
-      <MenuImg>
-        <Image src={imageSrc} alt="Image" />
-      </MenuImg>
-      <MenuText>
-        <h3>
-          <span>{itemName}</span> <strong>₹{itemPrice}</strong>
-        </h3>
-        <Bottom>
-          <p>{itemDescription}</p>
-          <div>
-            <ButtonV2Green>Buy</ButtonV2Green>
-          </div>
-        </Bottom>
-      </MenuText>
-    </MenuItem>
+    <>
+      <MenuItemDis showModal={show} />
+      <MenuItem onClick={showModel}>
+        <MenuImg>
+          <Image src={imageSrc} alt="Image" />
+        </MenuImg>
+        <MenuText>
+          <h3>
+            <span>{itemName}</span> <strong>₹{itemPrice}</strong>
+          </h3>
+          <Bottom>
+            <p>
+              {itemDescription}
+            </p>
+            <div style={{display : "flex" , gap : "1rem"}}>
+              <StarRating rating={0} />
+             <NumberInputs onChange={(a)=>console.log(a)} value={0}/>
+              {/* <ButtonGroup>
+                <Button bg>-</Button> <input type="number" /> <Button bg>+</Button>
+              </ButtonGroup> */}
+              {/* <ButtonV2Green onClick={showModel}>Buy</ButtonV2Green> */}
+            </div>
+          </Bottom>
+        </MenuText>
+      </MenuItem>
+    </>
   );
 }
 
