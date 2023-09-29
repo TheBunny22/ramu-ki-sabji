@@ -1,5 +1,5 @@
 import { styled } from "styled-components";
-import { colors } from "../../theme/theme";
+import { colors, media } from "../../theme/theme";
 import { Link } from "react-router-dom";
 
 const NavCover = styled.div`
@@ -36,7 +36,10 @@ const NavItem = styled(Link)`
 `;
 const NavLogo = styled.img`
   height: 10vh;
-  margin:0 1rem;
+  margin: 0 1rem;
   object-fit: cover;
+  ${media.mobile`
+  height: 5vh;
+  `}
 `;
 export { NavCover, NavHeading, NavItemCover, NavItem, NavLogo };

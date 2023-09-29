@@ -15,7 +15,7 @@ const BookingForm = () => {
                 <p>
                   Ramu ki Sabji was born out of a passion for sharing the
                   diverse and vibrant flavors of Indian cuisine with people
-                  around the world. The founder, Mr. Ramu, a skilled chef with
+                  around the world. The founder, Mr. Ram, a skilled chef with
                   years of experience in preparing Indian delicacies, envisioned
                   a service that could bring the essence of traditional Indian
                   meals to the doorstep of customers near and far.
@@ -26,10 +26,13 @@ const BookingForm = () => {
                   goodness of Indian dishes. The team of expert chefs takes
                   great pride in using fresh, locally sourced ingredients and
                   traditional cooking methods, ensuring that each dish retains
-                  its original flavors and aromas. Paneer Sabji, a vegetarian
-                  delight featuring cottage cheese cooked with a blend of
-                  aromatic spices and herbs, holds a special place in their
-                  menu, capturing the essence of Indian gastronomy.
+                  its original flavors and aromas.
+                </p>
+                <p>
+                  Paneer Sabji, a vegetarian delight featuring cottage cheese
+                  cooked with a blend of aromatic spices and herbs, holds a
+                  special place in their menu, capturing the essence of Indian
+                  gastronomy.
                 </p>
               </div>
             </div>
@@ -89,7 +92,7 @@ const BookingForm = () => {
                     data-target-input="nearest"
                   >
                     <input
-                      type="text"
+                      type="date"
                       className="form-control datetimepicker-input"
                       placeholder="Date"
                       data-target="#date"
@@ -101,7 +104,7 @@ const BookingForm = () => {
                       data-toggle="datetimepicker"
                     >
                       <div className="input-group-text">
-                        <i className="far fa-calendar-alt"></i>
+                        {/* <i className="far fa-calendar-alt"></i> */}
                       </div>
                     </div>
                   </div>
@@ -113,11 +116,11 @@ const BookingForm = () => {
                     data-target-input="nearest"
                   >
                     <input
-                      type="text"
+                      type="time"
                       className="form-control datetimepicker-input"
                       placeholder="Time"
-                      data-target="#time"
-                      data-toggle="datetimepicker"
+                      dataTarget="#time"
+                      dataToggle="datetimepicker"
                     />
                     <div
                       className="input-group-append"
@@ -125,26 +128,30 @@ const BookingForm = () => {
                       data-toggle="datetimepicker"
                     >
                       <div className="input-group-text">
-                        <i className="far fa-clock"></i>
+                        {/* <i className="far fa-clock"></i> */}
                       </div>
                     </div>
                   </div>
                 </div>
                 <div className="control-group">
                   <div className="input-group">
-                    <select className="custom-select form-control">
-                      <option selected>Guest</option>
+                    <select
+                      className="custom-select form-control"
+                      defaultValue="1"
+                    >
+                      <option value="0">Guest</option>
                       <option value="1">1 Guest</option>
-                      <option value="2">2 Guest</option>
-                      <option value="3">3 Guest</option>
-                      <option value="4">4 Guest</option>
-                      <option value="5">5 Guest</option>
-                      <option value="6">6 Guest</option>
-                      <option value="7">7 Guest</option>
-                      <option value="8">8 Guest</option>
-                      <option value="9">9 Guest</option>
-                      <option value="10">10 Guest</option>
+                      <option value="2">2 Guests</option>
+                      <option value="3">3 Guests</option>
+                      <option value="4">4 Guests</option>
+                      <option value="5">5 Guests</option>
+                      <option value="6">6 Guests</option>
+                      <option value="7">7 Guests</option>
+                      <option value="8">8 Guests</option>
+                      <option value="9">9 Guests</option>
+                      <option value="10">10 Guests</option>
                     </select>
+
                     <div className="input-group-append">
                       <div className="input-group-text">
                         <i className="fa fa-chevron-down"></i>

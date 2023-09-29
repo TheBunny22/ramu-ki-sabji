@@ -34,13 +34,20 @@ const MenuBlock = () => {
               <div className="row">
                 <div className="col-lg-7 col-md-12">
                   <MenuComponent
-                  key="kdshgjkksah"
                     imageSrc={Chanams}
                     itemName={"Chana Masala"}
                     itemDescription={"AJHVVJVJAVJV"}
                     itemPrice={490}
                     inStock={true}
                     rating={4}
+                  />
+                  <MenuComponent
+                    imageSrc={Chanams}
+                    itemName={"Chana Masala"}
+                    itemDescription={"AJHVVJVJAVJV"}
+                    itemPrice={40}
+                    inStock={false}
+                    rating={3}
                   />
                   <div className="menu-item">
                     <div className="menu-img">

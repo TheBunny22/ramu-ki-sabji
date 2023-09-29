@@ -187,6 +187,7 @@ a:focus {
   }
 
   .navbar .navbar-brand {
+   
     color: #fbaf32;
   }
 
@@ -227,6 +228,8 @@ a:focus {
 
   .navbar .navbar-brand {
     color: #fbaf32;
+    font-size: 2rem;
+    margin-right: 10px;
   }
 
   .navbar .navbar-nav {
@@ -236,7 +239,10 @@ a:focus {
   .navbar a.nav-link {
     padding: 5px;
   }
-
+  .container-fluid {
+    display: flex;
+    justify-content: space-evenly;
+  }
   .navbar .dropdown-menu {
     box-shadow: none;
   }
@@ -524,7 +530,7 @@ a:focus {
   border: none;
   background: none;
   top: 15px;
-  right: 15px;
+  right: 20px;
   color: #ffffff;
   font-size: 14px;
 }
@@ -542,6 +548,28 @@ a:focus {
 .booking .booking-form select.form-control {
   padding: 0 10px;
 }
+.booking .booking-form select.form-control option{
+  background: #ffffff;
+  color:#000000;
+}
+/* Remove the date input icon */
+input[type="date"]::-webkit-calendar-picker-indicator,
+input[type="date"]::-webkit-inner-spin-button,
+input[type="date"]::-webkit-clear-button {
+  
+  
+  filter: invert(100%) ;
+  font-size: 14px;
+}
+
+/* Remove the time input icon */
+input[type="time"]::-webkit-calendar-picker-indicator,
+input[type="time"]::-webkit-inner-spin-button,
+input[type="time"]::-webkit-clear-button {
+  filter: invert(100%) ;
+  font-size: 14px;
+}
+
 
 .booking .booking-form .form-control::placeholder {
   color: #ffffff;

@@ -5,6 +5,7 @@ import MenuItemDis from "./MenuItemDis";
 import StarRating from "../StarRating";
 import NumberInput from "../Button/NumberInput";
 import NumberInputs from "../Button/NumberInput";
+import { media } from "../../theme/theme";
 // import { Button, ButtonGroup } from "react-bootstrap";
 const MenuItem = styled.div`
   position: relative;
@@ -26,6 +27,9 @@ const MenuImg = styled.div`
   width: 80px;
   margin-right: 20px;
   border-radius: 100px;
+  ${media.mobile`
+    width :100px;  
+  `}
 `;
 
 const Image = styled.img`
@@ -67,13 +71,6 @@ const MenuText = styled.div`
     color: #fbaf32;
     background: #ffffff;
   }
-
-  p {
-    position: relative;
-    margin: 5px 0 0 0;
-    float: left;
-    display: block;
-  }
 `;
 const Bottom = styled.div`
   display: flex;
@@ -99,10 +96,35 @@ const Button = styled.button`
   }
 `;
 
-const ButtonGroup = styled.div`
+const DisBox = styled.div`
   display: flex;
-  justify-content: center;
-  align-items: center;
+  /* justify-content: space-between; */
+  gap: 0.5rem;
+  padding: 0.2rem;
+  width: 100%;
+  align-items: left;
+  ${media.mobile`
+  flex-direction:column;
+  `}
+  p {
+    position: relative;
+    margin: 5px 0 0 0;
+    float: left;
+    display: block;
+    ${media.mobile`
+    margin : 0;
+  `}
+  }
+`;
+
+const Wrapper = styled.div`
+  display: flex;
+  justify-content: right;
+  width : 100%;
+  gap:1rem;
+  ${media.mobile`
+    justify-content: space-between;
+  `}
 `;
 
 function MenuComponent({
@@ -111,7 +133,7 @@ function MenuComponent({
   itemPrice,
   itemDescription,
   rating,
-  inStock
+  inStock,
 }) {
   const [show, setShow] = useState(false);
 
@@ -129,15 +151,17 @@ function MenuComponent({
             <span>{itemName}</span> <strong>₹{itemPrice}</strong>
           </h3>
           <Bottom>
-            <p>{itemDescription}</p>
-            <div style={{ display: "flex", gap: "1rem" }}>
-              <StarRating rating={rating} />
-              <NumberInputs
-                onChange={(a) => console.log(a)}
-                value={0}
-                inStock={inStock}
-              />
-            </div>
+            <DisBox>
+              <p>{itemDescription}</p>
+              <Wrapper>
+                <StarRating rating={rating} />
+                <NumberInputs
+                  onChange={(a) => console.log(a)}
+                  value={0}
+                  inStock={inStock}
+                />
+              </Wrapper>
+            </DisBox>
           </Bottom>
         </MenuText>
       </MenuItem>
