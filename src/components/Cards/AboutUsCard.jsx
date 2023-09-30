@@ -54,7 +54,7 @@ const AboutUsCard = () => {
                     to="/booking"
                     onClick={scrollTop}
                   >
-                    Book A Table
+                    Book A Event
                   </Link>
                 </div>
               </div>

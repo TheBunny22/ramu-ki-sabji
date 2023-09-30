@@ -3,12 +3,10 @@ import styled from "styled-components";
 import { media } from "../theme/theme";
 
 const SVGC = styled.svg`
-  display: inline;
   margin: 0 4px;
   width: 1rem;
   height: 1rem;
   ${media.mobile`
-  
   margin: 0 4px 0 0;
   `}
 `;
@@ -42,7 +40,7 @@ function StarRating({ rating }) {
   };
 
   return (
-    <div>
+    <div style={{ display: "flex" , alignItems:"center"}}>
       {[0, 1, 2, 3, 4].map((starIndex) => (
         <SVGC
           key={starIndex}

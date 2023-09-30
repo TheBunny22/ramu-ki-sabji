@@ -27,9 +27,6 @@ const MenuImg = styled.div`
   width: 80px;
   margin-right: 20px;
   border-radius: 100px;
-  ${media.mobile`
-    width :100px;  
-  `}
 `;
 
 const Image = styled.img`
@@ -119,10 +116,12 @@ const DisBox = styled.div`
 
 const Wrapper = styled.div`
   display: flex;
+  /* border: 1px solid red; */
   justify-content: right;
-  width : 100%;
-  gap:1rem;
+  width: 100%;
+  gap: 1rem;
   ${media.mobile`
+  width : calc(100%-100px);
     justify-content: space-between;
   `}
 `;
